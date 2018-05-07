@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace FF.Service
 {
-    public class HttpService : IHttpService
+    public class HttpService : BaseService, IHttpService
     {
         private IWebClient _webClient;
         public HttpService(IWebClient webClient)

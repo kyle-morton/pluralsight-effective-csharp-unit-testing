@@ -13,7 +13,7 @@ namespace FF.Service
 
         protected BaseService()
         {
-            Log = LogManager.GetLogger(GetType().FullName);
+            Log = LogManager.GetCurrentClassLogger();
         }
 
     }

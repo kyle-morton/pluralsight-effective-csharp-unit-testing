@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FF.Service
 {
-    public class DateTimeService : IDateTimeService
+    public class DateTimeService : BaseService, IDateTimeService
     {
         public DateTime UtcNow()
         {

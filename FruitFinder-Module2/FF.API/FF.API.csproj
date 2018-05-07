@@ -268,7 +268,9 @@
     </Content>
     <Content Include="swagger\fonts\DroidSans-Bold.ttf" />
     <Content Include="swagger\fonts\DroidSans.ttf" />
-    <Content Include="NLog.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
