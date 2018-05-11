@@ -118,3 +118,35 @@ Removing duplication ensures that every concept in the system has a single autho
 - test business rules & happy/sad paths
 - testing things the compiler would check aren't valuable and create something you might need to change later
 - don't worry about 100% code coverage, think about scenarios and real-world situations the code may face.
+
+---
+
+### When to use *Static*?
+- static methods are OK if the static of it doesn't change 
+- these don't need to be newed-up and can be easily called b/c they never have a state
+- these are also easily testable __if it's state doesn't change__
+__I.E__ an updateMyString() method that takes in a string and returns the changed string
+
+### Tips for creating easily-changable tests
+- maximum of 1 mock per test
+- fewer than 10% of tests use mocks
+- __RARELY__ directly test a private method (should be available via a seam)
+- test via scenario not method (keep tests are dumb as possible)
+
+---
+
+### Are my tests effective?
+1. you trust them
+2. you maintain them
+3. you actually read them (good naming)
+4. they don't impede development 
+
+### Unit Testing Checklist
+- test name describes the scenario
+- contains arrange, act, assert sections
+- stays within single project layer
+- is a state, value, or interaction test
+- fakes all dependencies
+- Mock at most 1 dependency per test
+- favors the public API (seams) over internal logic
+- asserts against single object 
